@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="DoughnutApp">
+<html lang="en" ng-app="CrimeApp">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Crime Around Century Link</title>
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+        <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <!-- Angular -->
+        <script src="bower_components/angular/angular.js"></script>
+        <!-- Bower components for Angular/d3 combo -->
+        <script src="bower_components/d3/d3.js"></script>
+        <script src="bower_components/nvd3/build/nv.d3.js"></script>
+        <script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+        <!-- Angular Resources -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-resource.js"></script>
+        <!-- Scripts -->
         <script src="js/app.js"></script>
         <script src="js/controllers.js"></script>
         <script src="js/services.js"></script>
     </head>
     <body>
-        <!-- <div class="container" ng-controller="DoughnutCtrl">
-            <h1>Doughnuts</h1>
-            <div class="alert alert-success" ng-hide="loaded">
-              <strong>Loading...</strong>
+        <div class="container">
+            <h1>How Safe is SODO?</h1>
+            <p>Paragraph introducing the project, lots of people spend time around SODO for games, etc. How safe is it?</p>
+            <p>Maybe heat map here to show all instances of crimes, and then delve into the details.</p>
+            <div class="row" ng-controller="CrimeCtrl">
+                <nvd3 options="options" data="data"></nvd3>
             </div>
-            <div class="well" ng-repeat="doughnut in doughnuts">
-              <h1>{{ doughnut.style }} <small>{{ doughnut.flavor }}</small></h1>
-            </div>
-            <div class="well">
-              <h1>{{ doughnut.style }} <small>{{ doughnut.flavor }}</small></h1>
-            </div>
-        </div> -->
+            <h6><small>Legend and explanation of the pie chart data</small></h6>
+        </div>
     </body>
 </html>
