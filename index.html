@@ -10,6 +10,9 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <!-- Angular -->
         <script src="bower_components/angular/angular.js"></script>
+        <!-- NgMap for heatmap -->
+        <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+        <script src="http://maps.google.com/maps/api/js"></script>
         <!-- Bower components for Angular/d3 combo -->
         <script src="bower_components/d3/d3.js"></script>
         <script src="bower_components/nvd3/build/nv.d3.js"></script>
@@ -23,13 +26,33 @@
     </head>
     <body>
         <div class="container">
-            <h1>How Safe is SODO?</h1>
-            <p>Paragraph introducing the project, lots of people spend time around SODO for games, etc. How safe is it?</p>
-            <p>Maybe heat map here to show all instances of crimes, and then delve into the details.</p>
-            <div class="row" ng-controller="CrimeCtrl">
-                <nvd3 options="options" data="data"></nvd3>
+            <h1>How Safe is SoDo?</h1>
+            <p>Seattle's SoDo (South of Downtown) neighborhood gets a lot of people passing through. Average attendance for a Seahawks home game at Century Link Field was 68,412 during the 2014-2015 season, accoring to <a href="http://www.statista.com/statistics/249667/average-home-attendance-of-the-seattle-seahawks/">Statista</a>, and that doesn't take into account attendance at Mariners games, Sounders games, or the various concerts and events that take place at SoDo's stadiums. With such a high concentration of people, especially during events where emotions can run high and alcohol is flowing, there's bound to be some influence on crime rates. But how dangerous is the crime around Century Link and SoDo's other venues?</p>
+            <div class="row" ng-controller="LocationCtrl" id="mapRow">
+                <div class="col-md-4 col-md-offset-4">
+                    <ng-map zoom="13" center="800 Occidental Ave S, Seattle, WA 98134">
+                    <shape name="circle" no-watcher="true"
+                    stroke-color="#69BE28"
+                    stroke-opacity="0.5"
+                    stroke-weight="2"
+                    fill-color="#69BE28"
+                    fill-opacity="0.2"
+                    center="800 Occidental Ave S, Seattle, WA 98134"
+                    radius="1609">
+                    </shape>
+                    <marker position="800 Occidental Ave S, Seattle, WA 98134"></marker>
+                </ng-map>
             </div>
-            <h6><small>Legend and explanation of the pie chart data</small></h6>
         </div>
-    </body>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <h5><small>The map above shows an area with a mile radius around Century Link Field, which is the area we'll be focusing on for criminal activity.</small></h5>
+            </div>
+        </div>
+        <div class="row" ng-controller="PieChartCtrl" id="chartRow">
+            <nvd3 options="options" data="data"></nvd3>
+        </div>
+        <h6><small>Legend and explanation of the pie chart data</small></h6>
+    </div>
+</body>
 </html>
