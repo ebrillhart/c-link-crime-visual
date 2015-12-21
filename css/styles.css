@@ -61,6 +61,9 @@ h1 {
 
 h1 span {
     color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #69BE28, 1px -1px 0 #69BE28, -1px 1px 0 #69BE28, 1px 1px 0 #69BE28;
 }
 
 a, a:hover, a:active, a:visited {
