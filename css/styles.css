@@ -1,3 +1,50 @@
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* Styles */
+    h1 {
+        font-size: 6rem;
+    }
+    p {
+        font-size: 2.1rem;
+    }
+    h5 small {
+        font-size: 2rem;
+    }
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 1024px) {
+    /* Styles */
+    h1 {
+        font-size: 13rem;
+    }
+    p {
+        font-size: 3rem;
+    }
+    h5 small {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Desktops and laptops ----------- */
+
+@media only screen and (min-width: 1024px) {
+    /* Styles */
+    h1 {
+        font-size: 9rem;
+    }
+    p {
+        font-size: 1.8rem;
+    }
+    h5 small {
+        font-size: 1.5rem;
+    }
+}
+
 body {
     background: linear-gradient(rgba(155, 161, 162, 1), rgba(0, 21, 50, 0.7), rgba(0, 21, 50, 0.7), transparent 100%), linear-gradient(0deg, #002244, transparent);
     color: white;
@@ -5,36 +52,29 @@ body {
 }
 
 h1 {
-  font-family: Pacifico, cursive;
-  font-size: 9rem;
-  color: #69BE28;
-  /* creating a stroke around letters without webkit */
-  text-shadow:
-   -1px -1px 0 white,  
-    1px -1px 0 white,
-    -1px 1px 0 white,
-     1px 1px 0 white;
+    font-family: Pacifico, cursive;
+    color: #69BE28;
+    /* creating a stroke around letters without webkit */
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 h1 span {
-  color: white;
+    color: white;
+}
+
+a, a:hover, a:active, a:visited {
+    color: #69BE28;
+    font-weight: bold;
+}
+
+p {
+    margin: 3% 0;
+}
+
+h5 small {
+    color: #A5ACAF;
 }
 
 #chart {
-  background-color: white;
-}
-
-div[ng-controller=HeatMapCtrl] {
-    position: relative;
-}
-
-div[ng-controller=HeatMapCtrl] #panel {
-    position: absolute;
-    top: 5px;
-    left: 50%;
-    margin-left: -180px;
-    z-index: 5;
-    background-color: #fff;
-    padding: 5px;
-    border: 1px solid #999;
+    background-color: white;
 }
