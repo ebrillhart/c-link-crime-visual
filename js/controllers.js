@@ -64,43 +64,43 @@ angular.module('CrimeCtrls', ['CrimeServices', 'nvd3', 'ngMap']).controller('Pie
             $scope.data = [{
                 key: "Petty Theft",
                 // converting count into percentage
-                y: ($scope.pettyTheft.length / 1000) * 100
+                y: ($scope.pettyTheft.length / 5000) * 100
             }, {
                 key: "Violent (Robbery/Mugging/Assault/Injury)",
-                y: ($scope.robberyAssaultInjury.length / 1000) * 100
+                y: ($scope.robberyAssaultInjury.length / 5000) * 100
             }, {
                 key: "Traffic Violations & Accidents",
-                y: ($scope.trafficViolationsAccidents.length / 1000) * 100
+                y: ($scope.trafficViolationsAccidents.length / 5000) * 100
             }, {
                 key: "Property Crimes",
-                y: ($scope.property.length / 1000) * 100
+                y: ($scope.property.length / 5000) * 100
             }, {
                 key: "General Disturbances",
-                y: ($scope.generalDisturbances.length / 1000) * 100
+                y: ($scope.generalDisturbances.length / 5000) * 100
             }, {
                 key: "False Alarms",
-                y: ($scope.falseAlarms.length / 1000) * 100
+                y: ($scope.falseAlarms.length / 5000) * 100
             }, {
                 key: "Behavioral & Mental Health",
-                y: ($scope.behavioralMentalHealth.length / 1000) * 100
+                y: ($scope.behavioralMentalHealth.length / 5000) * 100
             }, {
                 key: "Auto Thefts",
-                y: ($scope.autoThefts.length / 1000) * 100
+                y: ($scope.autoThefts.length / 5000) * 100
             }, {
                 key: "Weapons Calls",
-                y: ($scope.weaponsCalls.length / 1000) * 100
+                y: ($scope.weaponsCalls.length / 5000) * 100
             }, {
                 key: "Miscellaneous Misdemeanors",
-                y: ($scope.miscMisdmeanors.length / 1000) * 100
+                y: ($scope.miscMisdmeanors.length / 5000) * 100
             }, {
                 key: "Threats & Harassment",
-                y: ($scope.threatsHarassment.length / 1000) * 100
+                y: ($scope.threatsHarassment.length / 5000) * 100
             }, {
                 key: "Alcohol or Drug Related",
-                y: ($scope.liquorNarcotics.length / 1000) * 100
+                y: ($scope.liquorNarcotics.length / 5000) * 100
             }, {
                 key: "Other",
-                y: ($scope.otherCrimes.length / 1000) * 100
+                y: ($scope.otherCrimes.length / 5000) * 100
             }];
         });
     }, function error(data) {
