@@ -1,4 +1,5 @@
 angular.module('CrimeCtrls', ['CrimeServices', 'nvd3', 'ngMap']).controller('PieChartCtrl', ['$scope', 'Crime', function($scope, Crime) {
+    // this controller manages the pie chart visualization for crime categorization
     // creating category arrays
     $scope.resultCrimes = [];
     $scope.pettyTheft = [];
@@ -130,7 +131,7 @@ angular.module('CrimeCtrls', ['CrimeServices', 'nvd3', 'ngMap']).controller('Pie
         }
     };
 }]).controller('LocationCtrl', ['$scope', 'Crime', 'NgMap', function($scope, Crime, NgMap) {
-    // initializing map
+    // initializing map for location visual
     NgMap.getMap().then(function(map) {
     	console.log(map);
     });

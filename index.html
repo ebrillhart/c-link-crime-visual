@@ -28,8 +28,11 @@
     </head>
     <body>
     <div class="container">
+        <!-- header -->
         <h1>How <span>SAFE</span> is SoDo?</h1>
+        <!-- intro paragraph -->
         <p>Lots of people pass through Seattle's SoDo (South of Downtown) neighborhood. Average attendance for a Seahawks home game at Century Link Field was 68,412 during the 2014-2015 season, accoring to <a href="http://www.statista.com/statistics/249667/average-home-attendance-of-the-seattle-seahawks/">Statista</a>, and that doesn't take into account attendance at Mariners games, Sounders games, or the various concerts and events that take place at SoDo's stadiums and clubs. With such a high concentration of people, especially during events where emotions can run high and alcohol is flowing, there's bound to be some influence on crime rates. But how dangerous is the crime around Century Link and SoDo's other venues?</p>
+        <!-- map with location and radius visual -->
         <div class="row" ng-controller="LocationCtrl" id="mapRow">
             <div class="col-md-4 col-md-offset-4">
                 <ng-map zoom="13" center="800 Occidental Ave S, Seattle, WA 98134">
@@ -48,26 +51,31 @@
         </div>
     </div>
     <div class="container">
+        <!-- map caption -->
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <h5 class="text-center"><small>The map above shows the area within a mile radius around Century Link Field, which is the area we'll be focusing on for reported incidents.</small></h5>
             </div>
         </div>
         <div class="row">
+            <!-- intro to pie chart -->
             <p class="text-center">The chart below breaks down 1000 reported incidents since 2010 in the mile-radius area around Century Link by category as assigned by repsonding officers.</p>
         </div>
     </div>
     <div class="container">
+        <!-- pie chart -->
         <div class="row" ng-controller="PieChartCtrl" id="chartRow">
             <div class="col-md-8 col-md-offset-2" id="chart">
                 <nvd3 options="options" data="data"></nvd3>
             </div>
         </div>
         <div class="row">
+            <!-- caption for pie chart -->
             <div class="col-md-8 col-md-offset-2">
                 <h5 class="text-center"><small>Data for the above chart was pulled through Socrata Open Data from the City of Seattle's Department of Information Technology and the Seattle Police Department</small></h5>
             </div>
         </div>
+        <!-- data analysis -->
         <div class="row">
             <p>As we can see from the chart, the most prominent category of crime around Century Link is general distubances, which includes crimes categorized as "suspicious circumstances", "nuisance and/or mischief", "car prowls", and "disturbance." The other two most common types of crimes are property crimes, which includes lost/stolen or damaged property, and automotive incidents, including traffic violations. Violent crime, threats and harassment, and weapons calls combined make up only a very small percentage of incidents.</p>
             <p>Based on this breakdown, we can generalize that violent crime doesn't need to be a worry of a Seahawks game attendee, but that parking your car in a secure spot is probably something that you should make a priority. And, considering that alcohol and drug-related incidents make up a sizeable chunk of the breakdown, make sure you don't let your partying get the best of you.</p>
