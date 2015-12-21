@@ -63,6 +63,7 @@ angular.module('CrimeCtrls', ['CrimeServices', 'nvd3', 'ngMap']).controller('Pie
             // data for pie chart
             $scope.data = [{
                 key: "Petty Theft",
+                // converting count into percentage
                 y: ($scope.pettyTheft.length / 1000) * 100
             }, {
                 key: "Violent (Robbery/Mugging/Assault/Injury)",
